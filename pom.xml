@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.adweak.jcode</groupId>
+    <artifactId>jcode</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <!-- 不需要启动类 -->
+        <module>parent-demo</module>
+        <!-- 需要启动类的，按等级排序 -->
+        <!--8761,8762-->
+        <module>register-demo</module>
+
+        <!--8801-->
+        <module>quartz-demo</module>
+        <!--8802-->
+        <module>redis-demo</module>
+        <!--8803-->
+        <module>feign-demo</module>
+        <!--8804-->
+        <module>rest-demo</module>
+        <!--8805-->
+        <module>api-gateway</module>
+    </modules>
+
+</project>
