@@ -1,0 +1,13 @@
+
+#主目录
+
+*.idea
+*.iml
+target
+
+
+#子目录
+
+*/*.iml/
+*/target/
+*/*.idea/
