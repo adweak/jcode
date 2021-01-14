@@ -1,0 +1,27 @@
+# 不同拦截器加载顺序 - 值越小优先级越高
+# 网关拦截器类型
+# pre:在请求被路由（转发）之前调用
+# route：在路由（请求）转发时被调用
+# post：在路由（转发）请求后调用
+# error:服务网关发生异常时被调用
+order:
+    pre:
+        SignatureVerifyFilter: 1
+        TokenVerifyFilter: 2
+    route:
+    post:
+    error:
+        ErrorFilter: 0
+
+ignore:
+    token:
+        # true：开启token校验拦截器 false：关闭token校验拦截器
+        button: ture
+        # 需要关闭token校验的请求路径
+        endpoints: /v1/api-docs,
+    signature:
+        # true：开启signature校验拦截器 false：关闭signature校验拦截器
+        button: ture
+        # 需要关闭signature校验的请求路径
+        endpoints: /v1/api-docs,
+
