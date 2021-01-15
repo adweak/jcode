@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 
 @FeignClient(name = "redis-demo")
-@RequestMapping(value = "redis")
+//@RequestMapping(value = "redis")
 public interface RedisOneClient {
 
     @RequestMapping(value = "/saveStringRedis", method = RequestMethod.POST)

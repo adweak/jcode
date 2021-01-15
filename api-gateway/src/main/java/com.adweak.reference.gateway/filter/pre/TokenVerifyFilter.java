@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class TokenVerifyFilter extends ZuulFilter {
 
-    @Value("${order.error.TokenVerifyFilter}")
+    @Value("${order.pre.TokenVerifyFilter}")
     private int order;
 
     @Value("${ignore.token.button}")

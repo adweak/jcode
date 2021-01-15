@@ -1,4 +1,4 @@
-package com.adweak.reference.gateway.filter.pre;
+package com.adweak.reference.gateway.filter.post;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.exception.ZuulException;
@@ -10,9 +10,9 @@ import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
  * @date : 2021/1/14
  */
 
-public class RequestLogFilter extends ZuulFilter {
+public class ResponseLogFilter extends ZuulFilter {
 
-    @Value("${order.pre.RequestLogFilter}")
+    @Value("${order.post.ResponseLogFilter}")
     private int order;
 
     @Override
@@ -22,7 +22,7 @@ public class RequestLogFilter extends ZuulFilter {
 
     @Override
     public String filterType() {
-        return FilterConstants.PRE_TYPE;
+        return FilterConstants.POST_TYPE;
     }
 
     @Override

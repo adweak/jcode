@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class SignatureVerifyFilter extends ZuulFilter {
 
-    @Value("${order.error.SignatureVerifyFilter}")
+    @Value("${order.pre.SignatureVerifyFilter}")
     private int order;
 
     @Value("${ignore.signature.button}")

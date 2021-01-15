@@ -28,13 +28,15 @@ import java.util.List;
 
 @Configuration
 @EnableSwagger2
+@Primary
 @Slf4j
 public class SwaggerConfig implements SwaggerResourcesProvider {
 
     private static final String TITLE = "说明文档";
     private static final String DESCRIPTION = "接口说明文档";
     private static final String VERSION = "1.0";
-    private static final String DISPLAY_VERSION = "v1/api-docs";
+    // 此处对应Swagger2的版本，禁止修改。
+    private static final String DISPLAY_VERSION = "v2/api-docs";
 
     private static final String NAME = "XZL";
     private static final String URL = "http://www.baidu.com/s?ie=UTF-8&wd=桔雨禾";

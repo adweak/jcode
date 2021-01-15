@@ -12,6 +12,9 @@ public class DataRes<T> extends BaseRes {
 
     private T data;
 
+    public DataRes() {
+    }
+
     public DataRes(T data) {
         super();
         this.data = data;

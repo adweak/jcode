@@ -6,10 +6,12 @@
 # error:服务网关发生异常时被调用
 order:
     pre:
+        RequestLogFilter: 0
         SignatureVerifyFilter: 1
         TokenVerifyFilter: 2
     route:
     post:
+        ResponseLogFilter: 0
     error:
         ErrorFilter: 0
 
@@ -25,3 +27,15 @@ ignore:
         # 需要关闭signature校验的请求路径
         endpoints: /v1/api-docs,
 
+zuul:
+    ignored-services: '*'
+    SendErrorFilter:
+        error:
+            disable: true
+    routes:
+        redis-demo-service:
+            path: /redis/**
+            service-id: redis-demo
+        feign-demo-service:
+            path: /feign/**
+            service-id: feign-demo

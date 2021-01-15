@@ -1,4 +1,4 @@
-package com.adweak.reference.feign.configs;
+package com.adweak.reference.redis.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -23,8 +23,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Slf4j
 public class SwaggerConfig {
 
-    private static final String TITLE = "feign说明文档";
-    private static final String DESCRIPTION = "feign接口说明文档";
+    private static final String TITLE = "redis说明文档";
+    private static final String DESCRIPTION = "redis接口说明文档";
     private static final String VERSION = "1.0";
 
     private static final String NAME = "XZL";
@@ -38,7 +38,7 @@ public class SwaggerConfig {
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.adweak.reference.feign.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.adweak.reference.redis.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .enable(enabled)
