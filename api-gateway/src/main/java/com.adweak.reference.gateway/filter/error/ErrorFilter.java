@@ -1,6 +1,7 @@
 package com.adweak.reference.gateway.filter.error;
 
 import com.netflix.zuul.ZuulFilter;
+import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
@@ -19,6 +20,7 @@ public class ErrorFilter extends ZuulFilter {
 
     @Override
     public Object run() throws ZuulException {
+        RequestContext rct = RequestContext.getCurrentContext();
         return null;
     }
 
