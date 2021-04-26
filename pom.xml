@@ -26,6 +26,8 @@
         <module>rest-demo</module>
         <!--8805-->
         <module>api-gateway</module>
+        <!--8806-->
+        <module>hibernate-demo</module>
     </modules>
 
 </project>
