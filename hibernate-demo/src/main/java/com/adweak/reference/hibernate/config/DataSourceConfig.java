@@ -19,14 +19,14 @@ import javax.sql.DataSource;
 public class DataSourceConfig {
 
     @Primary
-    @Bean(name = "imgdbDataSource")
-    @ConfigurationProperties(prefix = "imgdb.datasource")
+    @Bean(name = "DataSource")
+    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource imgdbDataSource() {
         return DataSourceBuilder.create().build();
     }
     @Primary
-    @Bean(name = "imgdbJdbcTemplate")
-    public JdbcTemplate imgdbJdbcTemplate(@Qualifier("imgdbDataSource") DataSource dataSource) {
+    @Bean(name = "JdbcTemplate")
+    public JdbcTemplate imgdbJdbcTemplate(@Qualifier("DataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 
